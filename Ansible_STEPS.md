@@ -2,7 +2,7 @@
  generation key ssh
 
 ```bash
-ssh-keygen -C "amine pair of keys"
+ssh-keygen -t ecdsa -b 512 -f /tmp/keys-ssh
 ````
 
 show pair keys
@@ -22,17 +22,17 @@ whami
 ### output 
 amine
 ```bash
-ssh-copy-id -i amine@MACHINE_DISTANT(IP)
+ssh -i /tmp/keys-ssh amine@MACHINE_DISTANT(IP)
 ```
 
 2eme methode
 ```bash
-ssh-copy-id -i ~/.ssh/id_rsa.pub MACHINE_DISTANT(IP)
+ssh -i /tmp/keys-ssh MACHINE_DISTANT(IP)
 ```
 
 Establish connection
 ```bash
-ssh -i  ~/.ssh/id_rsa.pub MACHINE_DISTANT(IP)
+ssh  MACHINE_DISTANT(IP)
 ```
 
 for no repeat create passphrase
