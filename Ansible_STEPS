@@ -1,7 +1,0 @@
- ### Prerequis
- generation key ssh
-
-```bash
-
-ssh-keygen -t ed2559 -C "jay default"
-````
