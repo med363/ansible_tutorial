@@ -2,12 +2,23 @@
  generation key ssh
 
 ```bash
-ssh-keygen -t ed2559 -C "jay default"
+ssh-keygen -C "amine pair of keys"
 ````
+
+show pair keys
+```bash
+ls -la .ssh
+```
+
 1ere methode
 ```bash
-ls ~/.ssh/
+ll .ssh
 ```
+
+```bash
+whami
+```
+
 ### output 
 amine
 ```bash
@@ -16,12 +27,12 @@ ssh-copy-id -i amine@MACHINE_DISTANT(IP)
 
 2eme methode
 ```bash
-ssh-copy-id -i <path of pub key> MACHINE_DISTANT(IP)
+ssh-copy-id -i ~/.ssh/id_rsa.pub MACHINE_DISTANT(IP)
 ```
 
 Establish connection
 ```bash
-ssh -i <path_of_key> MACHINE_DISTANT(IP)
+ssh -i  ~/.ssh/id_rsa.pub MACHINE_DISTANT(IP)
 ```
 
 for no repeat create passphrase
