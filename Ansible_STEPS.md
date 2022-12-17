@@ -7,14 +7,14 @@ ssh-keygen -t ecdsa -b 512 -f /tmp/keys-ssh
 
 show pair keys
 ```bash
-ls -la .ssh
+ls -la /tmp/keys-ssh
 ```
 
 1ere methode
 ```bash
-ll .ssh
+ll /tmp/keys-ssh
 ```
-
+ IN MACHINE DISTANT
 ```bash
 whami
 ```
@@ -22,13 +22,13 @@ whami
 ### output 
 amine
 ```bash
-ssh -i /tmp/keys-ssh amine@MACHINE_DISTANT(IP)
+ssh-copy-id -i /tmp/keys-ssh amine@MACHINE_DISTANT(IP)
 ```
 
-2eme methode
-```bash
-ssh -i /tmp/keys-ssh MACHINE_DISTANT(IP)
-```
+#2eme methode
+#```bash
+#ssh -i /tmp/keys-ssh MACHINE_DISTANT(IP)
+#```
 
 Establish connection
 ```bash
