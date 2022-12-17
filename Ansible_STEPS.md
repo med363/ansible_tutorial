@@ -1,5 +1,58 @@
  ### Prerequis
  generation key ssh
+ 
+ install server openssh dans les deux cote
+ ```bash
+ apt install -y openssh-server
+ ```
+ cree user
+ ```bash
+ adduser ansadmin
+ ```
+
+ cote client
+ ```bash 
+ sudo nano /etc/ssh/ssh_config
+ ```
+ change PasswordAuthentification yes
+ ```bash
+ systemctl reload sshd
+ ```
+ genere key cote serbash
+ 
+ ```bash
+ su ansadmin
+ ```
+ 
+ ```bash
+ ssh-keygen -t rsa
+ ```
+ cote client meme user 
+  cree user
+ ```bash
+ adduser ansadmin
+ ```
+ copy public key to client 
+ ```bash
+ ssh-copy-id -i .ssh/id_rsa.pub @ip_client
+ 
+ establish connexion
+ ```bash
+ ssh @ip_client
+ ```
+ 
+ ET PUIS
+  cote client
+ ```bash 
+ sudo nano /etc/ssh/ssh_config
+ ```
+ change PasswordAuthentification NO
+ ```bash
+ systemctl reload sshd
+ ```
+ Pour acheive la connexion que par cle
+ 
+ _______________________________________________________________________________________________________________________________________________________________________
 
 ```bash
 ssh-keygen -t ecdsa -b 512 -f /tmp/keys-ssh
