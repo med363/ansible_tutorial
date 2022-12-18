@@ -9,6 +9,10 @@
  ```bash
  adduser ansadmin
  ```
+ to change privellige
+ ```bash
+ sudo nano /etc/sudoers
+ ```
 
  cote client
  ```bash 
