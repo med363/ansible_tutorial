@@ -13,6 +13,10 @@
  ```bash
  sudo nano /etc/sudoers
  ```
+ 
+ ```bash
+ ansadmin ALL=(ALL) NOPASSWD:ALL
+ ```
 
  cote client
  ```bash 
