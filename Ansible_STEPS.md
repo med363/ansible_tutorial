@@ -122,7 +122,8 @@ sudo apt update
 sudo apt install -y ansible
 ```
 create inventory (grp of MACHINE to manage)
-@ ip MACHINES
+[grp]
+@ ip MACHINES ansible_sudo_pass=<password> ansible_ssh_user=<username>
 ```bash
 nano inventory 
 ```
